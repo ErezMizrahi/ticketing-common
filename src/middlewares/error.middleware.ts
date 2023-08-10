@@ -7,6 +7,6 @@ export const errorHanlder = (err: Error, req: Request, res: Response, next: Next
         return;
     }
   
-
+    console.error(err);
     res.status(400).json({ errors: [{ message: err.message }] });
 }
